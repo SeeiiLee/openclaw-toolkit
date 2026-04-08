@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-04-08",
+  "description": "记忆系统 MVP — 触发关键词配置。修改此文件即修改触发规则，无需改脚本。",
+  "categories": [
+    {
+      "type": "lesson",
+      "label": "教训",
+      "emoji": "🔴",
+      "keywords": ["踩坑", "踩到", "出问题了", "失败了", "卡住了", "不对", "白费了", "绕路了", "failed", "error", "bug", "遇到问题", "搞不定"]
+    },
+    {
+      "type": "decision",
+      "label": "决策",
+      "emoji": "🟢",
+      "keywords": ["决定", "选了", "就这样", "原则", "以后都", "不用再问", "就按这个", "decided", "agreed", "就这么办"]
+    },
+    {
+      "type": "insight",
+      "label": "洞察",
+      "emoji": "🟡",
+      "keywords": ["其实", "关键是", "发现", "原来", "重要", "没想到", "恍然大悟", "insight", "realized", "figured out"]
+    },
+    {
+      "type": "preference",
+      "label": "偏好",
+      "emoji": "🟠",
+      "keywords": ["我喜欢", "我倾向于", "我讨厌", "我一般", "我通常", "我不想", "I prefer", "I usually", "坦白说"]
+    },
+    {
+      "type": "pattern",
+      "label": "模式",
+      "emoji": "🔵",
+      "keywords": ["每次都", "总是", "又来了", "重复出现", "第二次了", "happens every time", "again", "第三次了"]
+    },
+    {
+      "type": "milestone",
+      "label": "里程碑",
+      "emoji": "🏆",
+      "keywords": ["第一个", "第一次", "终于", "突破", "完成了", "first", "breakthrough"]
+    },
+    {
+      "type": "tool_change",
+      "label": "工具变化",
+      "emoji": "⚙️",
+      "keywords": ["工具坏了", "不可用了", "配置变了", "没反应了", "失效了", "stopped working", "工具调整"]
+    },
+    {
+      "type": "external_change",
+      "label": "外部变化",
+      "emoji": "📢",
+      "keywords": ["平台政策", "市场变了", "竞品", "行业", "政策变化", "platform", "market changed"]
+    },
+    {
+      "type": "wisdom",
+      "label": "商业洞察",
+      "emoji": "💡",
+      "keywords": ["我的判断", "我觉得", "经验是", "感悟", "灵光", "观点是", "判断是"]
+    },
+    {
+      "type": "agreement",
+      "label": "约定",
+      "emoji": "🤝",
+      "keywords": ["记得", "下次", "我们说好了", "承诺", "回头", "约定是", "remind me"]
+    },
+    {
+      "type": "solved",
+      "label": "经验固化",
+      "emoji": "✅",
+      "keywords": ["搞定了", "解决了", "跑通了", "成功了", "验证了", "OK了", "worked", "solved", "confirmed"]
+    },
+    {
+      "type": "self_reflection",
+      "label": "自我反思",
+      "emoji": "🔮",
+      "keywords": ["我错了", "我意识到", "需要改", "修正", "反思", "I was wrong", "need to correct"]
+    }
+  ]
+}
