@@ -1,0 +1,72 @@
+{
+  "id": "openclaw-toolkit",
+  "name": "OpenClaw Toolkit",
+  "version": "1.0.0",
+  "author": "Kairo",
+  "lastUpdated": "2026-04-08",
+  "description": "Cyrus Personal OpenClaw Toolkit - memory system, guardian mode, key management. Designed for portability: copy entire skill directory to new machine.",
+  "scripts": [
+    {
+      "id": "TOOL-MEM-001",
+      "name": "Memory Append Script",
+      "file": "scripts/memory_append.ps1",
+      "description": "Write keyword-hit content to Obsidian daily memory file. Auto-categorize by type (lesson/decision/insight etc 12 types), append to YYYY-MM-DD-records.md.",
+      "usage": "powershell -File memory_append.ps1 -Content CONTENT -Type TYPE",
+      "trigger": "Kairo auto-calls after detecting keywords in conversation, silent to user",
+      "tags": [
+        "memory",
+        "obsidian",
+        "auto-record"
+      ]
+    },
+    {
+      "id": "TOOL-MEM-002",
+      "name": "Daily Memory Summary Script",
+      "file": "scripts/memory_daily_summary.ps1",
+      "description": "Scan all daily records, dedupe, write to memory/MEMORY.md. Call before each session ends.",
+      "usage": "powershell -File memory_daily_summary.ps1",
+      "trigger": "Before each session ends, or user manually triggers",
+      "tags": [
+        "memory",
+        "obsidian",
+        "summary"
+      ]
+    },
+    {
+      "id": "TOOL-SEC-001",
+      "name": "Secure Credential Recovery",
+      "file": "scripts/secure_get.py",
+      "description": "Decrypt secrets_*.encrypted.json files in E:\\KEY BACKUP, extract account credentials. Used to recover Bilibili, email accounts etc.",
+      "usage": "python secure_get.py --filter KEYWORD",
+      "example": "python secure_get.py --filter bilibili",
+      "tags": [
+        "security",
+        "credentials",
+        "account-recovery"
+      ]
+    },
+    {
+      "id": "TOOL-SEC-002",
+      "name": "QClaw Guardian Mode",
+      "file": "scripts/qclaw_guardian.ps1",
+      "description": "Monitor QClaw process, auto-restart if crashed. Task Scheduler runs every 2 min. Ensures AI service stays online.",
+      "usage": "powershell -File qclaw_guardian.ps1",
+      "trigger": "Windows Task Scheduler every 2 minutes",
+      "tags": [
+        "ops",
+        "guardian",
+        "automation"
+      ]
+    }
+  ],
+  "workflow": {
+    "context": "Cyrus is an entrepreneur. Core problem: info loss across sessions. Kairo is his AI agent. Goal: build portable tools that survive machine changes.",
+    "memory_system": "keyword detection -> memory_append.ps1 -> memory_daily_summary.ps1 -> Obsidian. Kairo auto-calls at session end.",
+    "key_management": "All credentials encrypted in E:\\KEY BACKUP. secure_get.py decrypts on demand. No plaintext passwords in conversations.",
+    "guardian": "Flag file + PowerShell script + Task Scheduler 2min loop. Keeps QClaw alive."
+  },
+  "paths": {
+    "obsidian": "F:\\Documents\\CyrusNotes\\CyrusNote",
+    "openclawDataRoot": "F:\\QClawData"
+  }
+}
